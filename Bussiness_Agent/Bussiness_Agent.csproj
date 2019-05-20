@@ -3407,6 +3407,10 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Business_Agent.Core.Entities\Business_Agent.Core.Entities.csproj">
+      <Project>{D7EB4E5A-1B4F-494F-A6EC-5C71737BB8BE}</Project>
+      <Name>Business_Agent.Core.Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Business_Agent.Core.Service\Business_Agent.Core.Service.csproj">
       <Project>{EB033463-CAC4-4C35-A1F9-0DC0E965A5BC}</Project>
       <Name>Business_Agent.Core.Service</Name>

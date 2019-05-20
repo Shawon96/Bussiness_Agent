@@ -221,40 +221,43 @@
     <!-- /.tab-pane -->
 
     <div class="tab-pane active" id="settings">
-        <form class="form-horizontal">
+        @using (Html.BeginForm("CreateAgent", "Agent",
+             new { ReturnUrl = ViewBag.ReturnUrl },
+             FormMethod.Post, new { @class = "form-horizontal" }))
+        {
             <div class="form-group">
                 <label for="inputName" class="col-sm-2 control-label">Id/Code</label>
 
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputCode" placeholder="Code">
+                    <input type="text" class="form-control" name="Code" id="inputCode" placeholder="Code">
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputName" class="col-sm-2 control-label">Name</label>
 
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputName" placeholder="Name">
+                    <input type="text" class="form-control" name="Email" id="inputName" placeholder="Name">
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputEmail" class="col-sm-2 control-label">Email</label>
 
                 <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                    <input type="email" class="form-control" name="Name" id="inputEmail" placeholder="Email">
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputEmail" class="col-sm-2 control-label">Street</label>
 
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputStreet" placeholder="Street">
+                    <input type="text" class="form-control" name="Street" id="inputStreet" placeholder="Street">
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputMobile" class="col-sm-2 control-label">Mobile</label>
 
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputMobile" placeholder="Mobile">
+                    <input type="text" class="form-control" name="Mobile" id="inputMobile" placeholder="Mobile">
                 </div>
             </div>
 
@@ -262,7 +265,14 @@
                 <label for="inputSkills" class="col-sm-2 control-label">Phone</label>
 
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputPhone" placeholder="Phone">
+                    <input type="text" class="form-control" name="Phone" id="inputPhone" placeholder="Phone">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputSkills" class="col-sm-2 control-label">Zip</label>
+
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="Zip" id="InputZip" placeholder="Zip">
                 </div>
             </div>
             <div class="form-group">
@@ -276,77 +286,71 @@
                 <label for="inputSkills" class="col-sm-2 control-label">City</label>
 
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputCity" placeholder="City">
+                    <input type="text" class="form-control" name="City" id="inputCity" placeholder="City">
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputSkills" class="col-sm-2 control-label">Country</label>
 
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputCountry" placeholder="Country">
+                    <input type="text" class="form-control" name="Country" id="inputCountry" placeholder="Country">
                 </div>
             </div>
-            <div class="form-group">
-                <label for="inputSkills" class="col-sm-2 control-label">Phone</label>
-
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputPhone" placeholder="Phone">
-                </div>
-            </div>
+        
             <div class="form-group">
                 <label for="inputState" class="col-sm-2 control-label">State</label>
 
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputState" placeholder="State">
+                    <input type="text" class="form-control" name="State" id="inputState" placeholder="State">
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputState" class="col-sm-2 control-label">Contact Person</label>
 
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputCp" placeholder="Contact Person">
+                    <input type="text" class="form-control" name="ContactPerson" id="inputCp" placeholder="Contact Person">
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputState" class="col-sm-2 control-label">Reffered By</label>
 
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputRefBy" placeholder="Reffered By">
+                    <input type="text" class="form-control" name="ReferredBy" id="inputRefBy" placeholder="Reffered By">
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputState" class="col-sm-2 control-label">Logo</label>
 
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputLogo" placeholder="Logo">
+                    <input type="text" class="form-control" name="Logo" id="inputLogo" placeholder="Logo">
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputState" class="col-sm-2 control-label">Balance</label>
 
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputBalance" placeholder="Balance">
+                    <input type="text" class="form-control" name="Balance" id="inputBalance" placeholder="Balance">
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputState" class="col-sm-2 control-label">Login Url</label>
 
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputLgUrl" placeholder="Login Url">
+                    <input type="text" class="form-control" name="LoginUrl" id="inputLgUrl" placeholder="Login Url">
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputState" class="col-sm-2 control-label">Security Code</label>
 
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputSeCo" placeholder="Security Code">
+                    <input type="text" class="form-control" name="SecurityCode" id="inputSeCo" placeholder="Security Code">
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputSmtps" class="col-sm-2 control-label">SMTP Server</label>
 
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="SMTP_Server" placeholder="SMTP Server">
+                    <input type="text" class="form-control" name="SMTPServer" id="SMTP_Server" placeholder="SMTP Server">
                 </div>
             </div>
 
@@ -354,42 +358,57 @@
                 <label for="inputState" class="col-sm-2 control-label">SMTP Port</label>
 
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="SMTP_Port" placeholder="SMTP Port">
+                    <input type="text" class="form-control" name="SMTPPort" id="SMTP_Port" placeholder="SMTP Port">
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputState" class="col-sm-2 control-label">SMTP UserName</label>
 
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="SMTP_UserName" placeholder="SMTP UserName">
+                    <input type="text" class="form-control" name="SMTPUsername" id="SMTP_UserName" placeholder="SMTP UserName">
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputState" class="col-sm-2 control-label">SMTP Password</label>
 
                 <div class="col-sm-10">
-                    <input type="password" class="form-control" id="SMTPPassword" placeholder="SMTP Password">
+                    <input type="password" class="form-control" name="SMTPPassword" id="SMTPPassword" placeholder="SMTP Password">
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputState" class="col-sm-2 control-label">Created Date Of UTC</label>
 
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="CreatedDate" placeholder="Created Date Of UTC">
+                    <input type="text" class="form-control" name="CreatedOnUtc" id="CreatedDate" placeholder="Created Date Of UTC">
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputState" class="col-sm-2 control-label">Updated Date Of UTC</label>
 
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="UpdatedDate" placeholder="Updated Date Of UTC">
+                    <input type="text" class="form-control" name="UpdatedOnUtc" id="UpdatedDate" placeholder="Updated Date Of UTC">
+                </div>
+            </div>
+               <div class="form-group">
+                   <label for="inputState" class="col-sm-2 control-label">Current Balance</label>
+
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="CurrentBalance" id="CurrentBalance" placeholder="Current Balance">
+                </div>
+            </div>
+            <div class="form-group" style="display:none">
+                <label for="inputSkills" class="col-sm-2 control-label">Status</label>
+                <div class="col-sm-offset-2 col-sm-10" style="margin-top: -16px !important;">
+                    <label>
+                        <input type="checkbox" name="Deleted">
+                    </label>
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputSkills" class="col-sm-2 control-label">Status</label>
                 <div class="col-sm-offset-2 col-sm-10" style="margin-top: -16px !important;">
                     <label>
-                        <input type="checkbox">
+                        <input type="checkbox" name="Status">
                     </label>
                 </div>
             </div>
@@ -398,7 +417,7 @@
                     <button type="submit" class="btn btn-success">Submit</button>
                 </div>
             </div>
-        </form>
+        }
     </div>
     <!-- /.tab-pane -->
 </div>

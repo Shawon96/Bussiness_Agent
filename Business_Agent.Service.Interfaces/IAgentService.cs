@@ -9,5 +9,6 @@ namespace Business_Agent.Service.Interfaces
 {
    public interface IAgentService: IService<CreateAgent>
     {
+
     }
 }

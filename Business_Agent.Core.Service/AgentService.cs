@@ -12,5 +12,6 @@ namespace Business_Agent.Core.Service
     public class AgentService :ServiceBase<CreateAgent>, IAgentService
     {
         public AgentService(DbContext context) : base(context) { }
+
     }
 }
