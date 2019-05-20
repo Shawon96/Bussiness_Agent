@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Business_Agent.Core.Service
 {
-    public class AgentService :ServiceBase<CreateAgent>, IAgentService
+    public class AgentService :ServiceBase<BusinessEntities>, IAgentService
     {
         public AgentService(DbContext context) : base(context) { }
 

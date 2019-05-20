@@ -22,7 +22,7 @@ namespace Bussiness_Agent.Controllers
             return View("~/Views/Home/Index.cshtml");
         }
         [HttpPost]
-        public ActionResult CreateAgent(CreateAgent CreateAgent)
+        public ActionResult CreateAgent(BusinessEntities CreateAgent)
         {
             if (_service.Add(CreateAgent))
             {

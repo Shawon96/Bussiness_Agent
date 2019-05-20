@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Business_Agent.Service.Interfaces
 {
-   public interface IAgentService: IService<CreateAgent>
+   public interface IAgentService: IService<BusinessEntities>
     {
 
     }

@@ -13,6 +13,6 @@ namespace Business_Agent.Infrastructure
         public BussinessClientDbContext() : base("BussinessClientConnectionString")
         {
         }
-        public DbSet<CreateAgent> createAgents { set; get; }
+        public DbSet<BusinessEntities> createAgents { set; get; }
     }
 }

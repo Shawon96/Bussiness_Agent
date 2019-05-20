@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Business_Agent.Core.Entities
 {
-    public class CreateAgent
+    [Table("BusinessEntities")]
+    public class BusinessEntities
     {
         public int BusinessId { set; get; }
         public string Code { set; get; }
@@ -31,8 +33,8 @@ namespace Business_Agent.Core.Entities
         public string SMTPUsername { set; get; }
         public string SMTPPassword { set; get; }
         public bool Deleted { set; get; }
-        public DateTime CreatedOnUtc { set; get; }
-        public DateTime UpdatedOnUtc { set; get; }
+        public DateTime? CreatedOnUtc { set; get; }
+        public DateTime? UpdatedOnUtc { set; get; }
         public long CurrentBalance { set; get; }
     }
 }
