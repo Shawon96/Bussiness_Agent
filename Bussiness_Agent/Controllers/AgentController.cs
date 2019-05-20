@@ -8,10 +8,10 @@ namespace Bussiness_Agent.Controllers
 {
     public class AgentController : Controller
     {
-        // GET: Agent
-        public ActionResult Index()
+        [HttpGet]
+        public ActionResult CreateAgent()
         {
-            return View();
+            return View("~/Views/Home/Index.cshtml");
         }
     }
 }
