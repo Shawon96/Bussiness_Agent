@@ -20,10 +20,23 @@ namespace Bussiness_Agent
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js"));
+                      "~/Scripts/bootstrap.js",
+                      "~/Assets/bower_components/jquery/dist/jquery.min.js",
+                      "~/Assets/bower_components/bootstrap/dist/js/bootstrap.min.js",
+                      "~/Assets/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js",
+                      "~/Assets/plugins/timepicker/bootstrap-timepicker.min.js",
+                      "~/Assets/dist/js/adminlte.min.js"
+                      ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Assets/bower_components/bootstrap/dist/css/bootstrap.min.css",
+                      "~/Assets/bower_components/font-awesome/css/font-awesome.min.css",
+                      "~/Assets/bower_components/Ionicons/css/ionicons.min.css",
+                      "~/Assets/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css",
+                      "~/Assets/plugins/timepicker/bootstrap-timepicker.min.css",
+                      "~/Assets/dist/css/AdminLTE.min.css",
+                      "~/Assets/dist/css/skins/skin-blue.css",
                       "~/Content/site.css"));
         }
     }
